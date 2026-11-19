@@ -1,0 +1,77 @@
+
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>EduCAM - Apprendre autrement</title>
+<style>
+*{box-sizing:border-box}
+body{margin:0;font-family:Arial;background:#f2f6fc;color:#172554}
+header{background:#0755b8;color:white;padding:25px 18px;text-align:center}
+header h1{font-size:32px;margin:5px}
+header p{margin:8px}
+main{padding:20px;max-width:600px;margin:auto}
+.card{background:white;padding:20px;margin:15px 0;border-radius:14px;box-shadow:0 3px 12px #ccd5e5}
+h2{color:#0755b8}
+input,select{width:100%;padding:13px;margin:8px 0;border:1px solid #ccd5e5;border-radius:8px}
+button{background:#0755b8;color:white;border:0;padding:13px;border-radius:8px;width:100%;font-size:16px;margin-top:8px}
+.link{color:#0755b8;text-align:center;cursor:pointer}
+footer{text-align:center;padding:20px;color:#64748b}
+.hidden{display:none}
+</style>
+</head>
+<body>
+<header>
+<h1>EduCAM</h1>
+<p>La plateforme éducative du Cameroun</p>
+</header>
+<main>
+<div class="card" id="home">
+<h2>Bienvenue sur EduCAM !</h2>
+<p>Apprends, révise et prépare tes examens avec EduCAM.</p>
+<button onclick="show('register')">Créer un compte</button>
+<button onclick="show('login')">Se connecter</button>
+</div>
+
+<div class="card hidden" id="register">
+<h2>Créer un compte</h2>
+<input placeholder="Nom complet">
+<input type="email" placeholder="Adresse e-mail">
+<input type="password" placeholder="Mot de passe">
+<select>
+<option>Je suis...</option>
+<option>Élève</option>
+<option>Enseignant</option>
+</select>
+<button onclick="alert('Inscription à connecter prochainement !')">S'inscrire</button>
+<p class="link" onclick="show('home')">Retour</p>
+</div>
+
+<div class="card hidden" id="login">
+<h2>Connexion</h2>
+<input type="email" placeholder="Adresse e-mail">
+<input type="password" placeholder="Mot de passe">
+<button onclick="alert('Connexion à connecter prochainement !')">Se connecter</button>
+<p class="link" onclick="show('home')">Retour</p>
+</div>
+
+<div class="card">
+<h2>Nos objectifs</h2>
+<p>📚 Cours et leçons</p>
+<p>📝 Exercices corrigés</p>
+<p>🎓 Préparation aux examens</p>
+<p>👨‍🏫 Espace enseignants</p>
+<p>📋 Espace administration</p>
+</div>
+</main>
+<footer>EduCAM © 2026 - Apprendre autrement</footer>
+<script>
+function show(id){
+document.querySelectorAll('.card').forEach(e=>e.classList.add('hidden'));
+document.getElementById(id).classList.remove('hidden');
+}
+</script>
+</body>
+  </html>
+  
